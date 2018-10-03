@@ -10,7 +10,8 @@
   },
 
   "content_scripts": [
-    { "matches": [ "http://jisho.org/search/*", "http://www.jisho.org/search/*" ],
+    { "matches": [ "http://jisho.org/search/*", "http://www.jisho.org/search/*",
+                 "https://jisho.org/search/*", "https://www.jisho.org/search/*" ],
       "js": ["jquery.js", "content.js"]
     }
   ],
