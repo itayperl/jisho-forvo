@@ -19,7 +19,8 @@ function add_links()
             chrome.runtime.sendMessage(null, {word: word}, function(obj) {
                 busy = false;
                 if (obj !== null) {
-                    $(obj)[0].play();
+                    $('#forvo').html(obj);
+                    $('#forvo audio')[0].play();
                 }
                 else
                 {
@@ -38,4 +39,5 @@ $(function() {
     });
 
     observer.observe($('body')[0], { subtree:true, childList: true });
+    $('<div id="forvo"/>').appendTo('body');
 });
