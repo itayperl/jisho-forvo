@@ -2,7 +2,7 @@ var busy = false;
 
 function add_links()
 {
-    $('#primary .concept_light-wrapper').each(function() {
+    $('#primary .concept_light-wrapper, .page .concept_light-wrapper').each(function() {
         if ($(this).parent().find('.forvo').length > 0) {
             return;
         }
