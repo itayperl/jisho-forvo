@@ -1,6 +1,6 @@
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     $.ajax('https://forvo.com/search/' + request.word + '/ja').done(function(data) {
-        var play = $(data).find('.first-list .play');
+        var play = $(data).find('.results_match .play');
 
         if (play.length == 0)
         {
@@ -24,7 +24,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         audio_obj.append($('<source>').attr('src', mp3l).attr('type', 'audio/mpeg'));
         var oggl = 'https://audio00.forvo.com/ogg/' + atob(raw[3]);
         audio_obj.append($('<source>').attr('src', oggl).attr('type', 'audio/ogg'));
-        sendResponse(audio_obj[0].outerHTML)
+        sendResponse(audio_obj[0].outerHTML);
     });
 
     return true;

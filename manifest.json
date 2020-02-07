@@ -3,7 +3,7 @@
 
   "name": "Jisho-Forvo",
   "description": "Play pronunciation from Forvo in Jisho",
-  "version": "1.0",
+  "version": "1.1",
 
   "background": {
     "scripts": ["jquery.js", "background.js"]
