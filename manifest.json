@@ -1,12 +1,13 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "Jisho-Forvo",
   "description": "Play pronunciation from Forvo in Jisho",
-  "version": "1.1",
+  "version": "1.2",
 
   "background": {
-    "scripts": ["jquery.js", "background.js"]
+      "service_worker": "service_worker.js",
+      "type": "module"
   },
 
   "content_scripts": [
@@ -16,8 +17,7 @@
     }
   ],
 
-  "permissions": [
-    "nativeMessaging",
+  "host_permissions": [
     "https://forvo.com/",
     "https://audio00.forvo.com/"
   ]
